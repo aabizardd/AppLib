@@ -13,7 +13,7 @@
 
 
 
-            <form action="{{ url('/store') }}" method="POST">
+            <form action="{{ route('buku.store') }}" method="POST">
                 <div class="row">
 
                     <div class="col">

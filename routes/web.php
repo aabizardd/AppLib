@@ -45,6 +45,11 @@ Route::prefix('buku')->group(function () {
     Route::get('/', [BukuController::class, 'index'])->name('buku');
     Route::get('delete/{id}', [BukuController::class, 'delete'])->name('buku.delete');
     Route::get('tambah_buku', [BukuController::class, 'create'])->name('buku.tambah_buku');
+    Route::get('detail/{id}', [BukuController::class, 'show'])->name('buku.detail');
+
+    Route::post('store',[BukuController::class, 'store'])->name('buku.store');
+    Route::post('update',[BukuController::class, 'update'])->name('buku.update');
+    Route::post('update_detail',[BukuController::class, 'update_detail'])->name('buku.update_detail');
 });
 
 Route::middleware('auth')->group(function () {

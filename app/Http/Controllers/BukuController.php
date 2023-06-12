@@ -69,9 +69,18 @@ class BukuController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+
+        $book = M_Buku::find($id);
+        $book_detail = DetailBuku::where('id_buku', $id)->first();
+        
+        $data = [
+            'book' => $book,
+            'book_detail' => $book_detail
+        ];
+
+        return view('edit_buku', $data); 
     }
 
     /**
@@ -85,9 +94,45 @@ class BukuController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        
+        $data = $request->except(['_token', 'id_buku_lama']);
+
+        // dd($data);
+
+        if($request->id_buku_lama != $request->id_buku){
+
+            $book = M_Buku::where('id_buku',$request->id_buku)->get()->count();
+
+            if($book > 0){
+                
+                return redirect()->back()->with('danger', 'Data Buku Gagal Diubah, ID Buku Telah Digunakan!'); 
+            
+            }
+        
+        }
+
+        $book = M_Buku::find($request->id_buku_lama);
+
+        $book->update($data);
+
+        return redirect('/buku')->with('success', 'Data Buku Berhasil Diubah!'); 
+    }
+
+
+    public function update_detail(Request $request)
+    {
+        
+        $data = $request->except(['_token','nama_buku']);
+
+        
+
+        $book = DetailBuku::find($request->id_detail_buku);
+
+        $book->update($data);
+
+        return redirect('/buku')->with('success', 'Data Detail Buku Berhasil Diubah!'); 
     }
 
     /**

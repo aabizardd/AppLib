@@ -70,7 +70,7 @@
                                     <i class="fas fa-trash" style="color: red;font-size: 15px"></i>
                                 </a>
                                 &nbsp
-                                <a href="">
+                                <a href="{{ route('buku.detail', $item->id_buku) }}">
                                     <i class="fas fa-info-circle" style="color: blue;font-size: 15px"></i>
                                 </a>
                             </td>
