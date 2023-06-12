@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\PetugasController;
 
 
 /*
@@ -52,11 +53,24 @@ Route::prefix('buku')->group(function () {
     Route::post('update_detail',[BukuController::class, 'update_detail'])->name('buku.update_detail');
 });
 
+
+
+Route::prefix('petugas')->group(function () {
+    Route::get('/', [PetugasController::class, 'index'])->name('petugas');
+    Route::get('tambah', [PetugasController::class, 'create'])->name('petugas.tambah');
+    Route::get('show/{id}', [PetugasController::class, 'show'])->name('petugas.detail');
+    Route::post('store', [PetugasController::class, 'store'])->name('petugas.store');
+    Route::post('update', [PetugasController::class, 'update'])->name('petugas.update');
+    Route::get('hapus/{id}', [PetugasController::class, 'destroy'])->name('petugas.delete');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
 
 require __DIR__.'/auth.php';
 // Route::controller(RoleController::class)->group(function(){
