@@ -1,0 +1,276 @@
+:root{
+  scroll-behavior: smooth;
+
+}
+
+header{
+    background-image: url("/logo/libr.jpg") ;
+    background-blend-mode:multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 70px;
+    background-color: #828a92;
+    border: 2px solid #a08e76;
+    border-radius: 5px;
+    
+    
+
+}
+
+/* label{
+    text-align: center;
+} */
+
+img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+h1{
+    
+    text-align: center;
+    text-decoration: underline;
+    color: #d4cfcf;
+  
+    
+    
+    
+}
+h2{
+    font-family: "Times New Roman", Times, serif;
+    color:#020202;
+    
+    font-style: bold;
+   
+    
+}
+
+body{
+  
+   background-color:#4aa394;
+   height: auto;
+  
+ 
+  
+
+
+}
+
+  main{
+    /* background-color:#B0B0B0;  */
+    
+    background-color: #ffffff;
+     width:98%;
+     height: fit-content;
+     float:left;
+     padding:10px;
+     border:2px solid #14100a;
+     border-radius: 5px;
+    
+
+  
+   
+   
+  }
+  aside{
+    width:15%;
+    height:800px;
+    float:right;
+    background:#ffffff;
+    padding:10px;
+    position: relative;
+    top: 0;
+    border-radius: 15px;
+    border: 2px solid #020202;
+    
+   
+
+  
+
+    
+  }
+  aside h1{
+    background-color: rgb(0, 139, 125);
+    /* right: 40px; */
+    margin-left: -30px;
+    top: 0;
+    color: #cec3c3;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: medium;
+   
+
+  }
+
+
+  .button {
+    display: inline;
+    border-radius: 4px;
+    border: 2px solid #020202;
+    color: #f8f6f6;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bolder;
+    font-size: 14px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    /* cursor: pointer; */
+    margin: 20px;
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    /* right: -20px; */
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 20px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+.radio{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+   
+    
+    
+    }
+   
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px;
+      padding: 1.3rem 7%;
+      /* background-image: linear-gradient(to right, rgb(23, 59, 68), rgba(255,0,0,0)); */
+      background-color: #f4f3f8;
+      border-bottom: 5px solid rgba(243, 242, 248, 0.6);
+      border-radius: 15px;
+      position: sticky;
+      border:  5px solid #020202;
+      
+     
+     
+  
+  }
+  nav a{
+    color: rgb(0, 0, 0);
+    display: flexbox;
+    font-size: 1.1rem;
+    margin: 0 2rem;
+    border-radius: 3px;
+    font-family:Arial, Helvetica, sans-serif ; 
+
+   
+   
+  
+    
+}
+nav a:hover{
+  color:rgb(226, 83, 83);
+ 
+}
+.buttonutama {
+  height: 50px;
+  margin: 5px;
+  width: 120px;
+  background: #a1bfec;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #404C5D 1px;
+  font-size: 16px;
+  color: rgb(182, 195, 219);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(to right, #3f0005, #57536d);
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width:auto;
+  padding: 20px;
+  color: #000000;
+}
+
+.dropbtn {
+  background-color: #1996ac;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #150463;
+}
+/* .sarana th{
+  width: 180px;
+}
+.pelayanan th{
+  width: 180px;
+} */
